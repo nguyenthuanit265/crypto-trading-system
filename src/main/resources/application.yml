@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: crypto-trading-system
+  datasource:
+    url: jdbc:h2:mem:cryptotradingdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+external:
+  binance:
+    url: https://api.binance.com/api/v3/ticker/bookTicker
+  huobi:
+    url: https://api.huobi.pro/market/tickers
