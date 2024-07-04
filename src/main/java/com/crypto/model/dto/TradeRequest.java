@@ -2,6 +2,7 @@ package com.crypto.model.dto;
 
 import com.crypto.annotation.HashText;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 @Builder
 public class TradeRequest {
 
-    @HashText(fieldName = "userId")
+    @NotNull
     @JsonProperty("userId")
     private Long userId;
 
@@ -24,7 +25,7 @@ public class TradeRequest {
     @JsonProperty("type")
     private String type; // "BUY" or "SELL"
 
-    @HashText(fieldName = "amount")
+    @NotNull
     @JsonProperty("amount")
     private BigDecimal amount;
 }
