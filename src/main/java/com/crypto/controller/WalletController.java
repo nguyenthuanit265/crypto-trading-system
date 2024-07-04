@@ -20,6 +20,7 @@ public class WalletController {
 
     private final WalletService walletService;
 
+    // Assumption User has already authenticated and authorised to access the APIs
     @GetMapping("/{userId}")
     public ResponseEntity<?> getWalletBalance(@PathVariable Long userId) {
         return walletService.getUserWalletBalance(userId);

@@ -22,7 +22,6 @@ public class Trade {
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
     private String tradingPair;
     private String orderType;
     private BigDecimal price;
